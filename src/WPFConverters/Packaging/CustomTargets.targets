@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <UsingTask TaskName="CreatePackage" AssemblyFile="$(SolutionDir)\CustomBuildTasks\bin\$(Configuration)\CustomBuildTasks.dll" />
+    <UsingTask TaskName="GitLinkTask" AssemblyFile="$(SolutionDir)\CustomBuildTasks\bin\$(Configuration)\CustomBuildTasks.dll" />
+
+    <Target Name="CreateNuGetPackage" AfterTargets="AfterBuild">
+        <GitLinkTask Condition=" '$(Configuration)' == 'Release' "
+            SolutionDirectory="$(SolutionDir)\.."
+            ProjectName="$(MSBuildProjectName)" />
+
+        <CreatePackage
+            DestinationFolder="$(SolutionDir)\artifacts\"
+            NuSpecFile="Packaging\WPFConverters.nuspec"
+            ReferenceLibrary="$(OutputPath)$(AssemblyName).dll"
+            PackagesConfig="packages.config" />
+    </Target>
+</Project>

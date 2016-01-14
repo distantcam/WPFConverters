@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata minClientVersion="2.8">
+        <id>WPFConverters</id>
+        <version>$version$</version>
+        <title>WPFConverters</title>
+        <authors>Cameron MacFarland</authors>
+        <owners>Cameron MacFarland</owners>
+        <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+        <projectUrl>http://github.com/distantcam/WPFConverters</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Converters for WPF</description>
+        <language>en-AU</language>
+        <tags>WPF Converters</tags>
+    </metadata>
+</package>

@@ -1,0 +1,14 @@
+skip_tags: true
+
+configuration: Release
+
+before_build:
+  - nuget restore src\WPFConverters.sln
+
+build:
+  parallel: true
+  project: src\WPFConverters.sln
+  verbosity: minimal
+
+artifacts:
+  - path: src\artifacts\*.nupkg
