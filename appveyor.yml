@@ -8,7 +8,6 @@ before_build:
 build:
   parallel: true
   project: src\WPFConverters.sln
-  verbosity: detailed
 
 artifacts:
   - path: src\artifacts\*.nupkg

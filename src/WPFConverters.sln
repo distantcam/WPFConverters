@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFConverters", "WPFConverters\WPFConverters.csproj", "{C3F74DAC-8892-417C-9D19-7A169D5D8B72}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9E8C4D7F-B939-4A34-AEBB-A3323DDCF436} = {9E8C4D7F-B939-4A34-AEBB-A3323DDCF436}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomBuildTasks", "CustomBuildTasks\CustomBuildTasks.csproj", "{9E8C4D7F-B939-4A34-AEBB-A3323DDCF436}"
 EndProject
