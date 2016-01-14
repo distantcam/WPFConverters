@@ -49,7 +49,11 @@
     <Compile Include="BaseConverter.cs" />
     <Compile Include="BitmapImageConverter.cs" />
     <Compile Include="BoolToVisibilityConverter.cs" />
+    <Compile Include="BoolToBrushConverter.cs" />
+    <Compile Include="ColorToBrushConverter.cs" />
+    <Compile Include="NullToVisibilityConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringEmptyOrNullToVisibilityConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
