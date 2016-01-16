@@ -85,7 +85,7 @@ Converts `null` to `Visibility`
 - `IsHidden` - Use `Visibility.Hidden` for false values (or true values if `Invert` is also true).
 
 ```
-TextBlock Text="There was a problem"
+<TextBlock Text="There was a problem"
            Visibility="{Binding ErrorData,
                                 Converter={con:NullToVisibilityConverter}}" />
 ```
@@ -100,7 +100,7 @@ Convert an empty or `null` `string` to `Visibility`.
 - `IsHidden` - Use `Visibility.Hidden` for false values (or true values if `Invert` is also true).
 
 ```
-TextBlock Text="{Binding ErrorString}"
+<TextBlock Text="{Binding ErrorString}"
            Visibility="{Binding ErrorString,
                                 Converter={con:StringEmptyOrNullToVisibilityConverter}}" />
 ```
