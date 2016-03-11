@@ -10,12 +10,22 @@ namespace WPFConverters
         protected override object OnConvert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value is string)
-                return new BitmapImage(new Uri((string)value, UriKind.RelativeOrAbsolute));
+                return LoadImage(new Uri((string)value, UriKind.RelativeOrAbsolute));
 
             if (value is Uri)
-                return new BitmapImage((Uri)value);
+                return LoadImage((Uri)value);
 
             return DependencyProperty.UnsetValue;
+        }
+
+        private BitmapImage LoadImage(Uri uri)
+        {
+            var image = new BitmapImage();
+            image.BeginInit();
+            image.CacheOption = BitmapCacheOption.OnLoad;
+            image.UriSource = uri;
+            image.EndInit();
+            return image;
         }
     }
 }
